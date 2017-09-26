@@ -13,24 +13,22 @@ export class HomePage {
   }
 	openLiveRadio() {
 	  var params = { 
-			url: 'https://playerservices.streamtheworld.com/api/livestream-redirect/WYEPFMAAC.aac',
-			userAgent: 'MyAwesomePlayer', // default is 'ExoPlayerPlugin'
-			aspectRatio: 'FILL_SCREEN', // default is FIT_SCREEN
-			hideTimeout: 5000, // Hide controls after this many milliseconds, default is 5 sec
+			url: 'http://static.videogular.com/assets/videos/videogular.mp4',
+			aspectRatio: 'FIT_SCREEN', // default is FIT_SCREEN
+			autoplay: true,
 			seekTo: 0, // Start playback 10 minutes into video specified in milliseconds, default is 0
-			skipTime: 0, // Amount of time to use when going forward/backward, default is 1 min
 			controller: { // If this object is not present controller will not be visible
 					hideProgress: false,
+          hidePosition: false, // If timebar is visible hide current position from it
+          hideDuration: false, // If timebar is visible Hide stream duration from it
 					controlIcons: {
-							'exo_rew': 'http://url.to/rew.png',
-							'exo_play': 'http://url.to/play.png',
-							'exo_pause': 'http://url.to/pause.png',
-							'exo_ffwd': 'http://url.to/ffwd.png'
+			
 					}
 			}
 		}
 		this.plt.ready().then(() => {
-			  ExoPlayer.show(params);
+			  // ExoPlayer.show(params, (msg)=>console.log(msg), (err)=>console.log(err));
+        ExoPlayer.show(params);
     });
   }
 
