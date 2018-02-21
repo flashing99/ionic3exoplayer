@@ -8,8 +8,7 @@ This Ionic 3 application is an example app which uses the above cordova plugin.
 
 ### GET STARTED ###
 
-There is a Cordova plugin for Google’s ExoPlayer media framework:
-https://github.com/frontyard/cordova-plugin-exoplayer
+text inspired from : https://github.com/spyderboy/ionic2Exoplayer
 
 Generally, you can follow the instructions in the readme file for the plugin.  But you will need to do a couple of additional things in Ionic 2 and up (because, TypeScript 2):
 
