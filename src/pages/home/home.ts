@@ -11,7 +11,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public plt: Platform) {
   }
-	openLiveRadio() {
+	openLiveMovie() {
 	  var params = { 
 			url: 'http://static.videogular.com/assets/videos/videogular.mp4',
 			aspectRatio: 'FIT_SCREEN', // default is FIT_SCREEN
