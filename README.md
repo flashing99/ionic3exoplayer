@@ -10,7 +10,7 @@ This Ionic 3 application is an example app which uses the above cordova plugin.
 
 text inspired from : https://github.com/spyderboy/ionic2Exoplayer
 
-Generally, you can follow the instructions in the readme file for the plugin.  But you will need to do a couple of additional things in Ionic 2 and up (because, TypeScript 2):
+Generally, you can follow the instructions in the readme file for the plugin.  But you will need to do a couple of additional things:
 
 I started with the blank template, following these instructions: https://ionicframework.com/docs/intro/tutorial/
 
@@ -27,13 +27,13 @@ Add the Android platform:
 ionic cordova platform add android
 ```
 
-For testing purposes, I added a button on the first tutorial page: (src/pages/tutorial/tutorial.html)
+For testing purposes, I added a button on the first tutorial page: (src/pages/home/home.html)
 
 ```html 
-<button (click)="openLiveRadio()">Play</button>
+<button (click)="openLiveMovie()">Play</button>
 ```
 
-Then in tutorial.ts (same dir) I import Platform and add this declaration near the imports at the top of the code:
+Then in home.ts (same dir) I import Platform and add this declaration near the imports at the top of the code:
 ```javascript
 import { Platform } from 'ionic-angular';
 declare var ExoPlayer;
@@ -47,7 +47,7 @@ constructor(public navCtrl: NavController, public plt: Platform) {
 
 And here is the function in the HomePage class:
 ```javascript
-openLiveRadio() {
+openLiveMovie() {
 	  var params = { 
 			url: 'http://static.videogular.com/assets/videos/videogular.mp4',
 			aspectRatio: 'FIT_SCREEN', // default is FIT_SCREEN
